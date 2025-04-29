@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" href="LT- LOGO.png" type="image/x-icon">
+  <link rel="apple-touch-icon" href="LT- LOGO.png" type="image/x-icon">
+  <title>LoveTyped</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="resources/scripts/index.js" defer></script>
+</head>
+<body>
+
+  <header>
+        <h1 class="brand">LoveTyped</h1>
+        <ul>
+            <li><a href="resources/directory/order-form.html">order</a></li>
+            <li><a href="index.html#find-your-site">find your site</a></li>
+            <li><button onclick="openPopup()" >Get In Touch</button></li>
+        </ul>
+  </header>
+
+    <!-- Popup Background -->
+    <div id="contact-popup" class="popup-overlay">
+        <div class="popup-content">
+          <h2>Get In Touch</h2>
+          <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone">
+        
+            <label for="ltid">LT-ID:</label>
+            <input type="text" id="ltid" name="ltid" required>
+        
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        
+            <button type="submit">Send Message</button>
+          </form>
+          <button class="close-btn" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+  
+
+  <main>
+    <section class="intro">
+      <h2>Make Every Word Count</h2>
+      <p>We help you express what your heart can’t put into words. Whether it's a birthday, anniversary, or holiday — LoveTyped turns your emotions into beautifully designed digital love letters.</p>
+      <a href="#pricing" class="cta-btn">Start Your Order</a>
+    </section>
+
+    <section class="find-your-site" id="find-your-site">
+        <h2>Find Your Site</h2>
+        <p>Input your LT-iD found in email and text message:</p>
+        <input type="text" name="lt-id-search" id="lt-id-search" class="lt-id-search">
+        <button type="submit">GO</button>
+    </section>
+
+    <section class="features">
+      <h2>How It Works</h2>
+      <ul>
+        <li><strong>Choose a Vibe:</strong> Romantic, grateful, healing, playful.</li>
+        <li><strong>Tell Us Your Story:</strong> Answer a few quick prompts.</li>
+        <li><strong>Receive a Personalized Letter Page:</strong> Designed and delivered within 48 hours.</li>
+      </ul>
+      <a href="/resources/directory/order-form.html" class="cta-btn">Start Your Order</a>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <h2>Order Options & Pricing</h2>
+        <h3>Sites are BOGO for 2-3 sites, $10 per site after 3 sites purchased.</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Order Option</th>
+              <th>Description</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Romantic</td>
+              <td>A heartfelt letter for someone special</td>
+              <td>$20</td>
+            </tr>
+            <tr>
+              <td>Appreciation</td>
+              <td>Thank you notes to show your gratitude</td>
+              <td>$20</td>
+            </tr>
+            <tr>
+              <td>Just Because</td>
+              <td>Surprise someone anytime, no occasion needed</td>
+              <td>$20</td>
+            </tr>
+            <tr>
+              <td>I Love You</td>
+              <td>Deeply personal and romantic declarations</td>
+              <td>$20</td>
+            </tr>
+            <tr>
+              <td>Secret Admirer</td>
+              <td>Mysterious and anonymous love letters</td>
+              <td>$20</td>
+            </tr>
+            <tr>
+              <td>Happy Anniversary</td>
+              <td>Celebrate love milestones with a touching message</td>
+              <td>$20</td>
+            </tr>
+            <tr>
+              <td>Thinking of You</td>
+              <td>Gentle reminders that someone is on your mind</td>
+              <td>$20</td>
+            </tr>
+            <tr>
+              <td>Congratulations</td>
+              <td>Celebrate achievements and milestones</td>
+              <td>$20</td>
+            </tr>
+            <tr>
+              <td>Miss You</td>
+              <td>Heartfelt notes for someone far away</td>
+              <td>$20</td>
+            </tr>
+            <tr>
+              <td>Birthday Wishes</td>
+              <td>Joyful and custom birthday greetings</td>
+              <td>$20</td>
+            </tr>
+            <tr>
+              <td>Get Well Soon</td>
+              <td>Warm, uplifting messages for healing</td>
+              <td>$20</td>
+            </tr>
+            <tr>
+              <td>Thank You</td>
+              <td>Meaningful thank-you messages</td>
+              <td>$20</td>
+            </tr>
+            <tr>
+              <td>Good Luck</td>
+              <td>Encouraging words for new journeys</td>
+              <td>$20</td>
+            </tr>
+            <tr>
+              <td>Sympathy</td>
+              <td>Comforting notes during difficult times</td>
+              <td>$20</td>
+            </tr>
+            <tr>
+              <td>New Baby</td>
+              <td>Welcome a new life with sweet words</td>
+              <td>$20</td>
+            </tr>
+            <tr>
+              <td>Wedding</td>
+              <td>Celebrate new beginnings and love stories</td>
+              <td>$20</td>
+            </tr>
+            <tr>
+              <td>Friendship</td>
+              <td>Messages celebrating loyal friends</td>
+              <td>$20</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 LoveTyped. Made with heart by <a href="https://clarencescott.github.io">BioGlytch Studios</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

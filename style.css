@@ -1,0 +1,384 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+::selection{
+    background-color: white;
+    color: #ff66c4;
+}
+body {
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    padding: 1em 1em ;
+    background: #ff66c4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+  }
+  header ul{
+    display: flex;
+    list-style: none;
+    width: 30%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: capitalize;
+  }
+  header ul a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+  }
+  li button{
+    width: 150px;
+  }
+  .brand{
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  .tagline {
+    font-size: 1.2em;
+    color: #555;
+  }
+  .intro{
+    height: 80vh;
+    background:url(hero-bg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+  }
+  
+  .intro h2, .features h2, .pricing h2, .find-your-site h2 {
+    color: #ff66c4;
+    text-shadow: 0px 0px 4px white;
+    margin-bottom: 10px;
+    font-size: 2em;
+  }
+.find-your-site {
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    background-color: #ffceec;
+}
+.find-your-site input{
+    height: 2em;
+    width: 40%;
+    font-size: 18px;
+    text-align: left;
+    border: solid 1px rgb(52, 52, 255);
+}
+  .cta-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ff66c4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+  
+  th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  th {
+    background: #ffe5e5;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #777;
+    background: #f0f0f0;
+  }
+  /*------------------------
+  Contact Styling Section
+  -------------------------*/
+ /* ------------------------
+Order Form (CUTE VERSION)
+------------------------- */
+form {
+    background: #fff0f5;
+    padding: 40px;
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(255, 102, 196, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form h2 {
+    font-size: 2rem;
+    color: #ff66c4;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 5px white;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #c94f7c;
+    margin-bottom: 8px;
+    width: 100%;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 2px solid #ffd1ea;
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #ff66c4;
+    outline: none;
+    background-color: #fff5f9;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    width: 60%;
+    background-color: #ff66c4;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(255, 102, 196, 0.4);
+}
+
+button:hover {
+    background-color: #fab1de;
+    transform: scale(1.05);
+}
+
+::placeholder {
+    color: #c7a2b8;
+    font-style: italic;
+}
+
+/* Add a soft section spacing */
+.order-form-section {
+    padding: 50px 20px;
+    background: #fff5fa;
+    border-radius: 20px;
+    margin: 40px 0;
+}
+  /*---------------
+  Pricing List Styling
+  ----------------*/
+  .pricing {
+    padding: 40px 20px;
+    background: #fff5f7;
+    text-align: center;
+  }
+  
+  .pricing h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #c94f7c;
+  }
+  
+  table {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #ffffff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  th, td {
+    padding: 16px 20px;
+    text-align: left;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  thead {
+    background: #f78fb3;
+    color: #fff;
+  }
+  
+  tbody tr:nth-child(even) {
+    background: #fdf0f2;
+  }
+  
+  tbody tr:hover {
+    background: #ffe6ec;
+  }
+  /*---------------------
+  How it works styling section
+  ---------------------*/
+  .features {
+    padding: 50px 20px;
+    background: #fff0f5; /* very light pink lavender */
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin: 40px auto;
+    max-width: 800px;
+  }
+  
+  .features h2 {
+    font-size: 2.5rem;
+    color: #c94f7c;
+    margin-bottom: 25px;
+  }
+  
+  .features ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .features li {
+    font-size: 1.2rem;
+    color: #444;
+    background: #ffffff;
+    margin: 15px 0;
+    padding: 20px 25px;
+    border-left: 6px solid #f78fb3;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .features li strong {
+    color: #b93f6a;
+  }
+
+  /*------------------
+  POP UP Stylingsheet
+  ------------------*/
+  /* Popup Background */
+.popup-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  /* Popup Box */
+  .popup-content {
+    background: #fff0f5;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Form Styling */
+  #contact-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
+    color: #c94f7c;
+    font-weight: bold;
+  }
+  
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ffb6c1;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  #contact-form button {
+    background-color: #ff66c4;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #contact-form button:hover {
+    background-color: #fab1de;
+  }
+  
+  /* Close Button */
+  .close-btn {
+    margin-top: 10px;
+    background: none;
+    color: #ff66c4;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover {
+    color: #c94f7c;
+  }
+  @media screen and (max-width:1180px) {
+    header{
+        flex-direction: column;
+    }
+    header ul{
+        margin-top: .5em;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+    .intro{
+        padding: 0 1.3em;
+        text-align: center;
+    }
+    form {
+        background: none;
+        box-shadow: none;
+        width: 80%;
+      }
+  }

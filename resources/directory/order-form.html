@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/LT- LOGO.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/LT- LOGO.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/resources/scripts/index.js"></script>
+    <title>Place An Order</title>
+</head>
+<body>
+    
+  <header>
+    <h1 class="brand">LoveTyped</h1>
+    <ul>
+        <li><a href="/index.html">home</a></li>
+        <li><a href="/index.html#find-your-site">find your site</a></li>
+        <li><button onclick="openPopup()" >Get In Touch</button></li>
+    </ul>
+</header>
+
+<!-- Popup Background -->
+<div id="contact-popup" class="popup-overlay">
+    <div class="popup-content">
+      <h2>Get In Touch</h2>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone">
+    
+        <label for="ltid">LT-ID:</label>
+        <input type="text" id="ltid" name="ltid" required>
+    
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+    
+        <button type="submit">Send Message</button>
+      </form>
+      <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+<section class="order">
+    <form action="https://formsubmit.co/scottclarence5@gmail.com" method="POST">
+        <input type="hidden" name="_next" value="https://lovedtyped.vercel.app/thank-you.html">
+        <label for="fullname">Full Name:</label><br>
+        <input type="text" id="fullname" name="fullname" required><br><br>
+      
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+      
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+      
+        <label for="recipient">Recipient Name:</label><br>
+        <input type="text" id="recipient" name="recipient" required><br><br>
+
+        <label for="relationship">Who is this letter for?</label><br>
+        <input type="text" id="relationship" name="relationship" placeholder="e.g., My best friend, my partner, my mom" required><br><br>
+
+        <label for="messageTone">What tone do you want the letter to have?</label><br>
+        <select id="messageTone" name="messageTone" required>
+          <option value="">-- Please choose --</option>
+          <option value="romantic">Romantic</option>
+          <option value="thankful">Grateful</option>
+          <option value="healing">Healing</option>
+          <option value="playful">Playful</option>
+          <option value="celebratory">Celebratory</option>
+          <option value="sympathetic">Sympathetic</option>
+        </select><br><br>
+    
+        <label for="specialMemories">Share a special memory or message you want included:</label><br>
+        <textarea id="specialMemories" name="specialMemories" rows="4" placeholder="Tell us about a favorite moment, a personal message, or any important details..." required></textarea><br><br>
+    
+        <label for="importantDetails">Any important words, names, or details we should mention?</label><br>
+        <input type="text" id="importantDetails" name="importantDetails" placeholder="e.g., Nicknames, inside jokes, favorite song" ><br><br>
+
+      
+        <label for="order">Order Option:</label><br>
+        <select id="order" name="order" required>
+          <option value="">-- Please choose an option --</option>
+          <option value="romantic">Romantic</option>
+          <option value="appreciation">Appreciation</option>
+          <option value="just_because">Just Because</option>
+          <option value="i_love_you">I Love You</option>
+          <option value="secret_admirer">Secret Admirer</option>
+          <option value="happy_anniversary">Happy Anniversary</option>
+          <option value="thinking_of_you">Thinking of You</option>
+          <option value="congratulations">Congratulations</option>
+          <option value="miss_you">Miss You</option>
+          <option value="birthday_wishes">Birthday Wishes</option>
+          <option value="get_well_soon">Get Well Soon</option>
+          <option value="thank_you">Thank You</option>
+          <option value="good_luck">Good Luck</option>
+          <option value="sympathy">Sympathy</option>
+          <option value="new_baby">New Baby</option>
+          <option value="wedding">Wedding</option>
+          <option value="friendship">Friendship</option>
+        </select><br><br>
+      
+        <label for="contact_method">Preferred Contact Method:</label><br>
+        <select id="contact_method" name="contact_method" required>
+          <option value="">-- Please choose a method --</option>
+          <option value="phone">Phone</option>
+          <option value="email">Email</option>
+          <option value="text">Text Message</option>
+        </select><br><br>
+
+        <label for="siteQuantity">How many sites?</label>
+        <input type="number" id="siteQuantity" name="siteQuantity" min="1" oninput="calculatePrice()">
+        
+        <p id="totalPrice">Total: $0</p>
+        
+        <div style="
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        width: 259px;
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
+        border-radius: 10px;
+        font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;
+        ">
+        <div style="padding: 20px;">
+          <a target="_blank" href="https://square.link/u/dto3vSxW?src=embed" style="
+          display: inline-block;
+          font-size: 18px;
+          line-height: 48px;
+          height: 48px;
+          color: #ffffff;
+          min-width: 212px;
+          background-color: #006aff;
+          text-align: center;
+          box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+          border-radius: 6px;
+        ">Buy now</a>
+        </div>
+      </div>
+      </form>          
+</section>
+
+</body>
+</html>
