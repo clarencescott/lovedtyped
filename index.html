@@ -61,7 +61,7 @@
         <h2>Find Your Site</h2>
         <p>Input your LT-iD found in email and text message:</p>
         <input type="text" name="lt-id-search" id="lt-id-search" class="lt-id-search">
-        <button type="submit">GO</button>
+        <button type="submit" onclick="searchSite()">GO</button>
     </section>
 
     <section class="features">
@@ -180,6 +180,17 @@
     <p>&copy; 2025 LoveTyped. Made with heart by <a href="https://clarencescott.github.io">BioGlytch Studios</a></p>
   </footer>
 
-  <script src="script.js"></script>
+  
+  <script>
+    function searchSite() {
+  const ltIdInput = document.getElementById("lt-id-search").value;
+  if (ltIdInput) {
+    const siteUrl = `https://lovetyped.vercel.app/resources/directory/LoveTypes${ltIdInput}.html`; // Redirect to the LT_ID URL
+    window.location.href = siteUrl;  // Navigate to their unique site
+  } else {
+    alert("Please enter a valid LT-ID.");
+  }
+}
+  </script>
 </body>
 </html>
