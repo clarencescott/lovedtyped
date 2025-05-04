@@ -129,12 +129,23 @@
 </section>
 
 <script>
-  document.getElementById("order-form").addEventListener("submit", function () {
+   document.getElementById("order-form").addEventListener("submit", function (event) {
+    event.preventDefault();  // Prevent immediate submission
+
+    // Generate LT_ID timestamp
     const now = new Date();
     const timestamp = `${now.getFullYear().toString().slice(2)}${(now.getMonth() + 1).toString().padStart(2, '0')}${now.getDate().toString().padStart(2, '0')}-${now.getHours().toString().padStart(2, '0')}${now.getMinutes().toString().padStart(2, '0')}${now.getSeconds().toString().padStart(2, '0')}`;
-    
+
+    // Set the LT_ID value
     document.getElementById("ltid").value = timestamp;
+
+    // Log the LT_ID to confirm it's set
     console.log("LT_ID timestamp set to:", timestamp);
+
+    // Submit the form after a brief delay to ensure the LT_ID is set
+    setTimeout(() => {
+      document.getElementById("order-form").submit();
+    }, 100);  // 100 milliseconds delay
   });
 </script>
 
