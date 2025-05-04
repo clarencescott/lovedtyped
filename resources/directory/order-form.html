@@ -129,25 +129,17 @@
 </section>
 
 <script>
-  function generateLTID() {
+   function generateLTID() {
     const now = new Date();
-    const id = `LT-${now.getFullYear()}${(now.getMonth()+1).toString().padStart(2, '0')}${now.getDate().toString().padStart(2, '0')}${now.getHours().toString().padStart(2, '0')}${now.getMinutes().toString().padStart(2, '0')}${now.getSeconds().toString().padStart(2, '0')}`;
-    const ltidField = document.getElementById('ltid');
-    if (ltidField) {
-      ltidField.value = id;
-      console.log("Generated LT_ID:", id);
-    } else {
-      console.error("LT_ID field not found");
-    }
+    const id = `LT-${now.getFullYear()}${(now.getMonth() + 1).toString().padStart(2, '0')}${now.getDate().toString().padStart(2, '0')}${now.getHours().toString().padStart(2, '0')}${now.getMinutes().toString().padStart(2, '0')}${now.getSeconds().toString().padStart(2, '0')}`;
+    document.getElementById("ltid").value = id;
+    console.log("LT_ID set to:", id);
   }
 
-
-  document.addEventListener("DOMContentLoaded", generateLTID);
-
-  document.querySelector("form").addEventListener("submit", function () {
-  const val = document.querySelector("input[name='LT_ID']").value;
-  console.log("Submitting LT_ID:", val);
-});
+  // Ensure LT_ID is generated just before the form is submitted
+  document.getElementById("order-form").addEventListener("submit", function () {
+    generateLTID();
+  });
 </script>
 
 </body>
