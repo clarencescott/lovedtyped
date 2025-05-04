@@ -25,7 +25,10 @@
 <div id="contact-popup" class="popup-overlay">
     <div class="popup-content">
       <h2>Get In Touch</h2>
-      <form id="contact-form">
+      <form action="https://formsubmit.co/f9f9d65aecdcb558a778936ba2df68a5" method="POST" id="contact-form">
+        
+        <input type="hidden" name="_subject" value="Love Typed Support Form!">
+        <input type="hidden" name="_next" value="https://lovetyped.vercel.app/resources/directory/thank-you.html">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
     
@@ -50,6 +53,7 @@
 <section class="order">
     <form action="https://formsubmit.co/f9f9d65aecdcb558a778936ba2df68a5" method="POST">
         <input type="hidden" name="_next" value="https://lovetyped.vercel.app/resources/directory/thank-you.html">
+        <input type="hidden" name="_subject" value="New Love Typed Order !!">
         <input type="hidden" name="LT_ID" id="ltid">
 
         <label for="fullname">Full Name:</label><br>
@@ -123,6 +127,25 @@
         <button type="submit" class="place-order">Place Order</button>
       </form>          
 </section>
+
+<script>
+   function generateLTID() {
+    const now = new Date();
+    const id = `LT-${now.getFullYear()}${(now.getMonth()+1).toString().padStart(2, '0')}${now.getDate().toString().padStart(2, '0')}${now.getHours().toString().padStart(2, '0')}${now.getMinutes().toString().padStart(2, '0')}${now.getSeconds().toString().padStart(2, '0')}`;
+    document.getElementById('ltid').value = id;
+  }
+
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", function(event) {
+    generateLTID(); // generate ID before sending
+    // Delay to ensure ID is set before sending
+    setTimeout(() => {
+      form.submit(); // now manually submit
+    }, 100); // give it a moment
+    event.preventDefault(); // stop default submission
+  });
+</script>
 
 </body>
 </html>
