@@ -7,6 +7,7 @@
     <link rel="apple-touch-icon" href="/LT- LOGO.png" type="image/x-icon">
     <link rel="stylesheet" href="/style.css">
     <script src="/resources/scripts/index.js"></script>
+    <script src="/resources/scripts/handler.js"></script>
     <title>Place An Order</title>
 </head>
 <body>
@@ -47,8 +48,10 @@
 </div>
 
 <section class="order">
-    <form action="https://formsubmit.co/scottclarence5@gmail.com" method="POST">
+    <form action="https://formsubmit.co/f9f9d65aecdcb558a778936ba2df68a5" method="POST">
         <input type="hidden" name="_next" value="https://lovetyped.vercel.app/thank-you.html">
+        <input type="hidden" name="LT_ID" id="ltid">
+
         <label for="fullname">Full Name:</label><br>
         <input type="text" id="fullname" name="fullname" required><br><br>
       
@@ -117,34 +120,7 @@
         
         <p id="totalPrice">Total: $0</p>
         
-        <div style="
-        overflow: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        width: 259px;
-        background: #FFFFFF;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
-        border-radius: 10px;
-        font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;
-        ">
-        <div style="padding: 20px;">
-          <a target="_blank" href="https://square.link/u/dto3vSxW?src=embed" style="
-          display: inline-block;
-          font-size: 18px;
-          line-height: 48px;
-          height: 48px;
-          color: #ffffff;
-          min-width: 212px;
-          background-color: #006aff;
-          text-align: center;
-          box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
-          border-radius: 6px;
-        ">Buy now</a>
-        </div>
-      </div>
+        <button type="submit" class="place-order">Place Order</button>
       </form>          
 </section>
 
