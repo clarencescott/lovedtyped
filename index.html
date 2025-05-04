@@ -185,7 +185,7 @@
     function searchSite() {
   const ltIdInput = document.getElementById("lt-id-search").value;
   if (ltIdInput) {
-    const siteUrl = `https://lovetyped.vercel.app/resources/directory/LoveTypes${ltIdInput}.html`; // Redirect to the LT_ID URL
+    const siteUrl = `https://lovetyped.vercel.app/resources/directory/LoveTypes/${ltIdInput}.html`; // Redirect to the LT_ID URL
     window.location.href = siteUrl;  // Navigate to their unique site
   } else {
     alert("Please enter a valid LT-ID.");
