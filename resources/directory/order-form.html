@@ -54,7 +54,7 @@
     <form action="https://formsubmit.co/f9f9d65aecdcb558a778936ba2df68a5" method="POST">
         <input type="hidden" name="_next" value="https://lovetyped.vercel.app/resources/directory/thank-you.html">
         <input type="hidden" name="_subject" value="New Love Typed Order !!">
-        <input type="hidden" name="LT_ID" id="ltid">
+        <input type="hidden" onload="generateLTID()" name="LT_ID" id="ltid">
 
         <label for="fullname">Full Name:</label><br>
         <input type="text" id="fullname" name="fullname" required><br><br>
