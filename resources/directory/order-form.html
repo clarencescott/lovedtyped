@@ -54,7 +54,7 @@
     <form action="https://formsubmit.co/f9f9d65aecdcb558a778936ba2df68a5" method="POST">
         <input type="hidden" name="_next" value="https://lovetyped.vercel.app/resources/directory/thank-you.html">
         <input type="hidden" name="_subject" value="New Love Typed Order !!">
-        <input type="hidden" onload="generateLTID()" name="LT_ID" id="ltid">
+        <input type="hidden" name="LT_ID" id="ltid">
 
         <label for="fullname">Full Name:</label><br>
         <input type="text" id="fullname" name="fullname" required><br><br>
@@ -129,22 +129,16 @@
 </section>
 
 <script>
-   function generateLTID() {
+  function generateLTID() {
     const now = new Date();
     const id = `LT-${now.getFullYear()}${(now.getMonth()+1).toString().padStart(2, '0')}${now.getDate().toString().padStart(2, '0')}${now.getHours().toString().padStart(2, '0')}${now.getMinutes().toString().padStart(2, '0')}${now.getSeconds().toString().padStart(2, '0')}`;
     document.getElementById('ltid').value = id;
   }
 
-  const form = document.querySelector("form");
+  // Run as soon as the page loads
+  window.addEventListener("DOMContentLoaded", generateLTID);
 
-  form.addEventListener("submit", function(event) {
-    generateLTID(); // generate ID before sending
-    // Delay to ensure ID is set before sending
-    setTimeout(() => {
-      form.submit(); // now manually submit
-    }, 100); // give it a moment
-    event.preventDefault(); // stop default submission
-  });
+  console.log(document.getElementById("ltid").value);
 </script>
 
 </body>
