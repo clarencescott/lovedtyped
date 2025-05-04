@@ -132,13 +132,16 @@
   function generateLTID() {
     const now = new Date();
     const id = `LT-${now.getFullYear()}${(now.getMonth()+1).toString().padStart(2, '0')}${now.getDate().toString().padStart(2, '0')}${now.getHours().toString().padStart(2, '0')}${now.getMinutes().toString().padStart(2, '0')}${now.getSeconds().toString().padStart(2, '0')}`;
-    document.getElementById('ltid').value = id;
+    const ltidField = document.getElementById('ltid');
+    if (ltidField) {
+      ltidField.value = id;
+      console.log("Generated LT_ID:", id);
+    } else {
+      console.error("LT_ID field not found");
+    }
   }
 
-  // Run as soon as the page loads
-  window.addEventListener("DOMContentLoaded", generateLTID);
-
-  console.log(document.getElementById("ltid").value);
+  document.addEventListener("DOMContentLoaded", generateLTID);
 </script>
 
 </body>
