@@ -128,33 +128,33 @@
       </form>          
 </section>
 
-<script>
-   document.getElementById("order-form").addEventListener("submit", function (event) {
-    event.preventDefault();  // Prevent immediate submission
-
-    // Get phone number and extract last 4 digits
-    const phoneNumber = document.getElementById("phone").value;
-    const lastFourDigits = phoneNumber.slice(-4); // Get last 4 digits
-
-    // Get current date in YYMMDD-HHMMSS format
-    const now = new Date();
-    const timestamp = `${now.getFullYear().toString().slice(2)}${(now.getMonth() + 1).toString().padStart(2, '0')}${now.getDate().toString().padStart(2, '0')}-${now.getHours().toString().padStart(2, '0')}${now.getMinutes().toString().padStart(2, '0')}${now.getSeconds().toString().padStart(2, '0')}`;
-
-    // Combine the last 4 digits of phone number and the timestamp
-    const ltId = `${lastFourDigits}-${timestamp}`;
-
-    // Set the LT_ID value to the generated ID
-    document.getElementById("ltid").value = ltId;
-
-    // Log the ID to the console for verification
-    console.log("Generated LT_ID:", ltId);
-
-    // Submit the form after a brief delay to ensure the LT_ID is set
-    setTimeout(() => {
-      document.getElementById("order-form").submit();
-    }, 100);  // 100 milliseconds delay
-  });
-</script>
 
 </body>
+<script>
+  document.getElementById("order-form").addEventListener("submit", function (event) {
+   event.preventDefault();  // Prevent immediate submission
+
+   // Get phone number and extract last 4 digits
+   const phoneNumber = document.getElementById("phone").value;
+   const lastFourDigits = phoneNumber.slice(-4); // Get last 4 digits
+
+   // Get current date in YYMMDD-HHMMSS format
+   const now = new Date();
+   const timestamp = `${now.getFullYear().toString().slice(2)}${(now.getMonth() + 1).toString().padStart(2, '0')}${now.getDate().toString().padStart(2, '0')}-${now.getHours().toString().padStart(2, '0')}${now.getMinutes().toString().padStart(2, '0')}${now.getSeconds().toString().padStart(2, '0')}`;
+
+   // Combine the last 4 digits of phone number and the timestamp
+   const ltId = `${lastFourDigits}-${timestamp}`;
+
+   // Set the LT_ID value to the generated ID
+   document.getElementById("ltid").value = ltId;
+
+   // Log the ID to the console for verification
+   console.log("Generated LT_ID:", ltId);
+
+   // Submit the form after a brief delay to ensure the LT_ID is set
+   setTimeout(() => {
+     document.getElementById("order-form").submit();
+   }, 100);  // 100 milliseconds delay
+ });
+</script>
 </html>
