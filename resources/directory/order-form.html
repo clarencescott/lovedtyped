@@ -141,7 +141,13 @@
     }
   }
 
+
   document.addEventListener("DOMContentLoaded", generateLTID);
+
+  document.querySelector("form").addEventListener("submit", function () {
+  const val = document.querySelector("input[name='LT_ID']").value;
+  console.log("Submitting LT_ID:", val);
+});
 </script>
 
 </body>
