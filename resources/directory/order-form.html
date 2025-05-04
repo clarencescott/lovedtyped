@@ -129,16 +129,10 @@
 </section>
 
 <script>
-   function generateLTID() {
-    const now = new Date();
-    const id = `LT-${now.getFullYear()}${(now.getMonth() + 1).toString().padStart(2, '0')}${now.getDate().toString().padStart(2, '0')}${now.getHours().toString().padStart(2, '0')}${now.getMinutes().toString().padStart(2, '0')}${now.getSeconds().toString().padStart(2, '0')}`;
-    document.getElementById("ltid").value = id;
-    console.log("LT_ID set to:", id);
-  }
-
-  // Ensure LT_ID is generated just before the form is submitted
-  document.getElementById("order-form").addEventListener("submit", function () {
-    generateLTID();
+ document.getElementById("order-form").addEventListener("submit", function () {
+    const timestamp = Date.now(); // Unix timestamp in milliseconds
+    document.getElementById("ltid").value = timestamp;
+    console.log("LT_ID timestamp set to:", timestamp);
   });
 </script>
 
